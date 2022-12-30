@@ -1,1 +1,0 @@
-from {{module_name}}._{{module_name}} import *
