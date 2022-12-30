@@ -1,0 +1,54 @@
+# questions
+project_name:
+    type: str
+    help: What is your project name?
+
+module_name:
+    type: str
+    help: What is your Python module name?
+
+project_description:
+    type: str
+    help: Provide a description of a project?
+
+author:
+    type: str
+    help: What is your name/handle?
+    default: petereon
+
+email:
+    type: str
+    help: What is your email?
+    default: pvyboch1@gmail.com
+
+license:
+    type: str
+    help: What is the license?
+        - MIT
+        - "Apache 2.0"
+    default: MIT
+
+python_version:
+    type: str
+    help: What version of Python does this project support?
+    choices: 
+        - ">=3.7"
+        - ">=3.8"
+        - ">=3.9"
+        - ">=3.10"
+        - ">=3.11"
+    default: ">=3.8"
+
+include_functional_arsenal:
+    type: bool
+    help: Do you want to include the funcitonal programming libraries?
+    default: yes
+
+_templates_suffix: ""
+
+_exclude:
+    - .venv
+    - .git
+    - pdm.lock
+    - .pdm.toml
+    - copier.yaml

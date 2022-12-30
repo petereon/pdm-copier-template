@@ -1,0 +1,35 @@
+[tool.pdm]
+
+[project]
+name = "{{project_name}}"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "{{author}}", email = "{{email}}"},
+]
+
+requires-python = "{{python_version}}"
+readme = "README.md"
+license = {text = "{{license}}"}
+
+{% if include_functional_arsenal %}
+dependencies = [
+    "typeguard>=2.13.3",
+    "fn>=0.4.3",
+    "cytoolz>=0.12.1",
+]
+{% endif %}
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=22.12.0 ",
+    "ruff>=0.0.202",
+    "mypy>=0.991",
+    "ward>=0.67.0b0",
+    "ward-coverage>=0.3.0",
+    "poethepoet>=0.17.1",
+]
+
+[build-system]
+requires = ["pdm-pep517>=1.0"]
+build-backend = "pdm.pep517.api"
